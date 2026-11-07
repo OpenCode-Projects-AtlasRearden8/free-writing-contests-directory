@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Free Entry Desk — free writing contests, anthologies, and markets</title>
+<meta name="description" content="A curated, education-only directory of free-to-enter writing contests, anthologies, and paying magazines. Fee traps and rights grabs explained in plain English. No signups, no fees.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <h1>The Free Entry Desk</h1>
+  <p>A curated directory of writing contests, anthologies, and paying magazines that cost nothing to enter.</p>
+</header>
+
+<nav class="main" aria-label="Site navigation">
+  <a href="index.html" class="active">Directory</a>
+  <a href="red-flags.html">Red flags</a>
+  <a href="before-you-submit.html">Before you submit</a>
+  <a href="calendar.html">Deadline calendar</a>
+  <a href="log.html">Submission log</a>
+  <a href="rights.html">Rights, plain English</a>
+</nav>
+
+<main>
+  <h2>The directory</h2>
+  <div class="notice">
+    <strong>What this is:</strong> every entry below is <strong>free to enter or free to submit</strong> as of
+    its review month listed on each card. There is nothing to sign up for on this site — no account, no email,
+    no tracking. It works fully offline once loaded.
+    <br><strong>What this is not:</strong> not a guarantee, not legal or financial advice. Contest rules and
+    magazine windows change constantly. <em>Always verify at the official site linked on each card before
+    submitting.</em>
+  </div>
+
+  <div class="controls">
+    <input type="search" id="dir-search" placeholder="Search contests, prizes, genres…" aria-label="Search the directory">
+    <select id="dir-type" aria-label="Filter by type"></select>
+    <select id="dir-genre" aria-label="Filter by genre"></select>
+  </div>
+  <p class="meta" id="dir-count"></p>
+
+  <div id="directory-list"></div>
+
+  <h2>Where to find more free options</h2>
+  <ul>
+    <li><a href="https://thegrinder.diabolicalplots.com/" target="_blank" rel="noopener noreferrer">The Submission Grinder</a> — a free, searchable database of paying markets.</li>
+    <li><a href="https://www.duotrope.com/" target="_blank" rel="noopener noreferrer">Duotrope</a> — a large market database (the service itself charges a small fee, but many listed markets are free to submit).</li>
+    <li><a href="https://www.ralan.com/" target="_blank" rel="noopener noreferrer">Ralan</a> — long-running free listing of SF/F and horror markets, with paid/free status marked.</li>
+    <li><a href="https://www.horrortree.com/" target="_blank" rel="noopener noreferrer">Horror Tree</a> — free listings of horror-adjacent contests and anthology calls, with fee status called out.</li>
+    <li><em>University and library writing centers</em> often list vetted local and student contests — usually free.</li>
+  </ul>
+  <p>When you find one, run it past the <a href="red-flags.html">red flags list</a> and the
+  <a href="before-you-submit.html">pre-submission checklist</a> before sending anything.</p>
+
+  <p class="disclaimer">
+    This directory is for education only and is not affiliated with any of the listed contests or magazines.
+    Entry details, prizes, deadlines, and rights terms change; the linked official pages are the single source
+    of truth. Use the filters and checks here as a starting point, never as permission to skip reading the rules.
+  </p>
+</main>
+
+<script src="data/contests.js"></script>
+<script src="directory.js"></script>
+<script src="shared-footer.js"></script>
+</body>
+</html>

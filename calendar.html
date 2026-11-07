@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deadline calendar | The Free Entry Desk</title>
+<meta name="description" content="A free deadline calendar for fee-free writing contests, plus your own personal submission deadlines, stored locally.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <h1>Deadline calendar</h1>
+  <p>Typical seasonal windows for curated free contests, plus your own deadlines — stored on your device only.</p>
+</header>
+
+<nav class="main" aria-label="Site navigation">
+  <a href="index.html">Directory</a>
+  <a href="red-flags.html">Red flags</a>
+  <a href="before-you-submit.html">Before you submit</a>
+  <a href="calendar.html" class="active">Deadline calendar</a>
+  <a href="log.html">Submission log</a>
+  <a href="rights.html">Rights, plain English</a>
+</nav>
+
+<main>
+  <div class="notice">
+    This calendar <strong>never sends data anywhere</strong>. Personal deadlines you add below are saved in this
+    browser only. Curated windows are month-level reminders, not exact dates — contests move, so verify at the
+    official page every time.
+  </div>
+
+  <h2>Add a personal deadline</h2>
+  <form id="add-event-form" class="controls">
+    <label for="ev-title" style="min-width:100%;">Name of the deadline (e.g. "Ocean Awareness Contest closes")</label>
+    <input type="text" id="ev-title" required placeholder="Contest or submission name" style="min-width:20rem;">
+    <label for="ev-date">Date</label>
+    <input type="date" id="ev-date" required>
+    <label for="ev-notes">Notes (optional)</label>
+    <input type="text" id="ev-notes" placeholder="Status, time zone, queue link…">
+    <button type="submit">Add deadline</button>
+    <button type="button" class="btn danger" id="clear-events">Clear my deadlines</button>
+  </form>
+
+  <div id="calendar-list"></div>
+
+  <p class="disclaimer">
+    Education only. Curated windows are drawn from the directory's review notes and are approximate by design;
+    organizers shift dates, pause, or change rules from year to year. This project is not affiliated with any
+    listed contest. Built as a free education project by <strong>Asdale Dynamics, LLC</strong>.
+  </p>
+</main>
+
+<script src="data/contests.js"></script>
+<script src="deadline-calendar.js"></script>
+<script src="shared-footer.js"></script>
+</body>
+</html>

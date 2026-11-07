@@ -1,0 +1,13 @@
+{
+  "name": "free-writing-contests-directory",
+  "version": "1.0.0",
+  "description": "A curated directory of fee-free writing contests, anthologies, and paying markets, with red-flag guides, a deadline calendar, a local submission log, and plain-English rights notes. Education only. By Asdale Dynamics, LLC.",
+  "license": "MIT",
+  "author": "Asdale Dynamics, LLC",
+  "scripts": {
+    "start": "node serve.js",
+    "test": "node tests/validate.js"
+  },
+  "keywords": ["writing contests", "submissions", "authors", "free", "directory"],
+  "private": true
+}

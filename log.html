@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submission log | The Free Entry Desk</title>
+<meta name="description" content="A free, private submission log sheet for writers: track what you submitted where, response times, and fees. All data stays on your own device.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <h1>Submission log</h1>
+  <p>One line per submission. Everything stays on this device — no account, no uploads, no tracking.</p>
+</header>
+
+<nav class="main" aria-label="Site navigation">
+  <a href="index.html">Directory</a>
+  <a href="red-flags.html">Red flags</a>
+  <a href="before-you-submit.html">Before you submit</a>
+  <a href="calendar.html">Deadline calendar</a>
+  <a href="log.html" class="active">Submission log</a>
+  <a href="rights.html">Rights, plain English</a>
+</nav>
+
+<main>
+  <div class="notice">
+    <strong>Private by design:</strong> entries are saved in your browser's local storage. Back up with the
+    export buttons (JSON or CSV) — clearing browser data clears your log. This site works offline once loaded.
+  </div>
+
+  <h2>Add a submission</h2>
+  <form id="log-form">
+    <table>
+      <thead><tr><th>Date sent</th><th>Title</th><th>Venue / contest</th><th>Words</th><th>Type</th><th>Status</th><th>Expected response</th><th>Fee ($)</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><input type="date" id="log-date" aria-label="Date sent"></td>
+          <td><input type="text" id="log-title" required aria-label="Title"></td>
+          <td><input type="text" id="log-venue" aria-label="Venue"></td>
+          <td><input type="number" id="log-words" min="0" style="width:6rem;" aria-label="Word count"></td>
+          <td>
+            <select id="log-type" aria-label="Type">
+              <option>Short story</option><option>Flash (under 1,000)</option><option>Novel / manuscript</option>
+              <option>Poem</option><option>Essay / article</option><option>Other</option>
+            </select>
+          </td>
+          <td>
+            <select id="log-status" aria-label="Status">
+              <option>Submitted</option><option>Awaiting</option><option>Personal response</option>
+              <option>Form rejection</option><option>Declined</option><option>Accepted</option><option>Withdrawn</option>
+            </select>
+          </td>
+          <td><input type="date" id="log-responsedate" aria-label="Expected response date"></td>
+          <td><input type="number" id="log-fee" value="0" min="0" step="0.01" style="width:5rem;" aria-label="Fee paid in dollars"></td>
+          <td><input type="text" id="log-notes" aria-label="Notes" placeholder="Theme, queue link…"></td>
+        </tr>
+        <tr><td colspan="9"><button type="submit" class="btn">Add to log</button></td></tr>
+      </tbody>
+    </table>
+  </form>
+
+  <h2>Log</h2>
+  <p class="meta" id="log-count"></p>
+  <div class="controls">
+    <button id="export-json" type="button">Export JSON (backup)</button>
+    <button id="export-csv" type="button">Export CSV (spreadsheet)</button>
+    <label class="btn" for="import-json" style="display:inline-block;">Import JSON backup</label>
+    <input type="file" id="import-json" accept="application/json" style="display:none;">
+    <button class="btn danger" id="clear-log" type="button">Delete all entries</button>
+  </div>
+  <table>
+    <thead><tr><th>Date</th><th>Title</th><th>Venue</th><th>Words</th><th>Type</th><th>Status</th><th>Expected response</th><th>Fee</th><th>Notes</th></tr></thead>
+    <tbody id="log-body"></tbody>
+  </table>
+
+  <h2>Reading your own log</h2>
+  <ul>
+    <li><strong>Fees column:</strong> for a free-entry project it should always read $0. If a "free" contest
+    quietly starts charging, that number is your record that the rules changed after you entered.</li>
+    <li><strong>Expected response:</strong> note the response time the venue states. If they blow past it,
+    it's fair to query politely — and useful information for the next submission.</li>
+    <li><strong>Exclusivity end dates:</strong> if a market's rights window is 6 months, put the date your
+    rights return in "Expected response" and you have a self-managing reminder.</li>
+  </ul>
+
+  <p class="disclaimer">
+    Education only; your log contents are your own data and never leave this device. Part of a free education
+    project by <strong>Asdale Dynamics, LLC</strong>.
+  </p>
+</main>
+
+<script src="submission-log.js"></script>
+<script src="shared-footer.js"></script>
+</body>
+</html>
